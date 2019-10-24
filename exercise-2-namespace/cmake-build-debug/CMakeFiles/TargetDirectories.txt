@@ -1,0 +1,3 @@
+/mnt/c/Users/Lillie/University/C++/es2-namespace/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Lillie/University/C++/es2-namespace/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Lillie/University/C++/es2-namespace/cmake-build-debug/CMakeFiles/es2_namespace.dir

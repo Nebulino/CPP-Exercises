@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -d=NDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/es3_class.dir/src/dbuffer.cpp.o CMakeFiles/es3_class.dir/src/main.cpp.o  -o es3_class 

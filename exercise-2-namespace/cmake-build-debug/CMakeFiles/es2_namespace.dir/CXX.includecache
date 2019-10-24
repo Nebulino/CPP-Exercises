@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/dbuffer.h
+
+/mnt/c/Users/Lillie/University/C++/es2-namespace/src/dbuffer.cpp
+dbuffer.h
+/mnt/c/Users/Lillie/University/C++/es2-namespace/src/dbuffer.h
+iostream
+-
+cassert
+-
+
+/mnt/c/Users/Lillie/University/C++/es2-namespace/src/main.cpp
+iostream
+-
+dbuffer.h
+/mnt/c/Users/Lillie/University/C++/es2-namespace/src/dbuffer.h
+
