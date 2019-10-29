@@ -95,7 +95,43 @@ dbuffer& dbuffer::operator=(const dbuffer &rhs) {
     // Check if the addresses are not the same. Avoiding the auto-assignment
     // This is a pointer. also &rhs.
     if (this != &rhs) {
-        // ...
+
+        // If this fails => just exit and the dbuffer state still has its original state...
+        // Use temporary variables for taking old data first...
+        int *tmp = new int[rhs._size];
+
+        delete[] _buffer;
+        _buffer = tmp;
+        _size = rhs._size;
+
+        for (int i = 0; i < _size; ++i) {
+            tmp[i] = rhs._buffer[i];
+        }
+
+        // Delete old data...
+        delete[] _buffer;
+
+        _buffer = tmp;
+        _size = rhs._size;
+
+        /// PROBLEMS - MEMORY RECOVERY ///
+        /* Not a good way...Because of the coherent state problem...
+        delete[] _buffer;
+        _buffer = nullptr;
+        _size = 0;
+
+        // Simulate a new failure~ without try catch => this is not in a coherent state
+        // Add size = 0 then...
+
+        _buffer = new int[rhs._size];
+        _size = rhs._size;
+
+        for (int i = 0; i < _size; ++i) {
+            _buffer[i] = rhs._buffer[i];
+        }
+
+        */
+
     }
 
     return *this; // I need do de-reference it...
