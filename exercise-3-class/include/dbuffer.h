@@ -8,6 +8,8 @@
 
 class dbuffer {
 
+    // All the constructors change the class state
+
 private:
     unsigned int _size;
     int *_buffer;
@@ -33,11 +35,22 @@ public:
     ~dbuffer();
 
     // Value Getter and Setter
-    int getValue(unsigned int index);
-    void setValue(unsigned int index, int value);
-    int& value(unsigned int index);
 
-    unsigned int size();
+    int getValue(unsigned int index) const;
+
+    void setValue(unsigned int index, int value);
+
+    // Not secure for modify stuff...
+    int &value(unsigned int index);
+    // Secure one...
+    const int &value(unsigned int index) const;
+    // With the same... in the compiler... We can only use the const one...
+    // Class Const-ness
+    // Also if we use a const method, the utilizer needs to be const as well...
+
+
+    // This method is not changing the class state => const at the end
+    unsigned int size() const;
 
     // Default 3: Operator= "Assignment"3
     // RightHandSide

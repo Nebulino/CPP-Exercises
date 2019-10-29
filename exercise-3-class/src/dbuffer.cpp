@@ -53,7 +53,7 @@ dbuffer::dbuffer(unsigned int size, int value) : _size(0), _buffer(nullptr) {
 
     // IN C++ you can't call another constructor with a constructor
     // Create a private method? A helper method
-    for(int i=0; i<size; ++i) {
+    for (unsigned int i=0; i<size; ++i) {
         _buffer[i] = value;
     }
 
@@ -76,7 +76,7 @@ dbuffer::~dbuffer() {
 
 }
 
-int dbuffer::getValue(unsigned int index) {
+int dbuffer::getValue(unsigned int index) const {
 
     assert(index < this -> _size);
     return this -> _buffer[index];
@@ -96,7 +96,14 @@ int &dbuffer::value(unsigned int index) {
 
 }
 
-unsigned int dbuffer::size() {
+const int &dbuffer::value(unsigned int index) const {
+
+    assert(index < this -> _size);
+    return this -> _buffer[index];
+
+}
+
+unsigned int dbuffer::size() const {
 
     return this -> _size;
 
@@ -136,7 +143,7 @@ dbuffer& dbuffer::operator=(const dbuffer &rhs) {
         _buffer = tmp;
         _size = rhs._size;
 
-        for (int i = 0; i < _size; ++i) {
+        for (unsigned int i = 0; i < _size; ++i) {
             tmp[i] = rhs._buffer[i];
         }
 
@@ -160,7 +167,7 @@ dbuffer& dbuffer::operator=(const dbuffer &rhs) {
         _buffer = new int[rhs._size];
         _size = rhs._size;
 
-        for (int i = 0; i < _size; ++i) {
+        for (unsigned int i = 0; i < _size; ++i) {
             _buffer[i] = rhs._buffer[i];
         }
 
@@ -182,7 +189,7 @@ dbuffer::dbuffer(const dbuffer &other) : _size(0), _buffer(nullptr) {
 
     _buffer = new int[other._size];
 
-    for (int i = 0; i < other._size; ++i) {
+    for (unsigned int i = 0; i < other._size; ++i) {
         _buffer[i] = other._buffer[i];
     }
 

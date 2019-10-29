@@ -10,19 +10,24 @@
 
 void funct1(dbuffer d) {
 
-    std::cout << "Funct1" << std::endl;
+    std::cout << " === Function 1 === " << std::endl;
 
 }
 
-void funct2(dbuffer &d) {
+void funct2(const dbuffer &d) {
 
-    std::cout << "Funct2" << std::endl;
+    std::cout << " === Function 2 === " << std::endl;
+    for (unsigned int i = 0; i < d.size(); ++i) {
+
+        std::cout << "d.value := " << d.value(i) << std::endl;
+
+    }
 
 }
 
 void funct3(dbuffer *d) {
 
-    std::cout << "Funct3" << std::endl;
+    std::cout << " === Function 3 === " << std::endl;
 
 }
 
@@ -63,14 +68,14 @@ int main(int argc, char *argv[]) {
     db4 = db2;
     assert(db4.size() == db2.size());
 
-    for (int i = 0; i < db4.size(); ++i) {
+    for (unsigned int i = 0; i < db4.size(); ++i) {
         assert(db4.value(i) == db2.value(i));
     }
 
     // Instead of db4 = 5;
     db4 = dbuffer(5);
 
-    dbuffer db5;
+    dbuffer db5(5);
 
     // By passing => copy constructor 2 new 2 destroyers
     funct1(db5);
