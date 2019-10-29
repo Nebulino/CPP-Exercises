@@ -27,7 +27,7 @@ dbuffer::dbuffer() : _size(0), _buffer(nullptr) {
 
 }
 
-dbuffer::dbuffer(unsigned int size) : _size(0), _buffer(nullptr) {
+dbuffer::dbuffer(size_type size) : _size(0), _buffer(nullptr) {
 
     // Make object coherent state === operations ===
     // _size = 0;
@@ -37,12 +37,12 @@ dbuffer::dbuffer(unsigned int size) : _size(0), _buffer(nullptr) {
     this -> _size = size;
 
 #ifndef NDEBUG
-    std::cout << "dbuffer::dbuffer(unsigned int _size)" << std::endl;
+    std::cout << "dbuffer::dbuffer(size_type _size)" << std::endl;
 #endif
 
 }
 
-dbuffer::dbuffer(unsigned int size, int value) : _size(0), _buffer(nullptr) {
+dbuffer::dbuffer(size_type size, int value) : _size(0), _buffer(nullptr) {
 
     // Make object coherent state === operations ===
     // _size = 0;
@@ -53,12 +53,12 @@ dbuffer::dbuffer(unsigned int size, int value) : _size(0), _buffer(nullptr) {
 
     // IN C++ you can't call another constructor with a constructor
     // Create a private method? A helper method
-    for (unsigned int i=0; i<size; ++i) {
+    for (size_type i=0; i<size; ++i) {
         _buffer[i] = value;
     }
 
 #ifndef NDEBUG
-    std::cout << "dbuffer::dbuffer(unsigned int _size, int value)" << std::endl;
+    std::cout << "dbuffer::dbuffer(size_type _size, int value)" << std::endl;
 #endif
 
 }
@@ -76,34 +76,36 @@ dbuffer::~dbuffer() {
 
 }
 
-int dbuffer::getValue(unsigned int index) const {
+int dbuffer::getValue(size_type index) const {
 
     assert(index < this -> _size);
     return this -> _buffer[index];
 
 }
 
-void dbuffer::setValue(unsigned int index, int value) {
+void dbuffer::setValue(size_type index, int value) {
 
     assert(index < this -> _size);
     this -> _buffer[index] = value;
 }
 
-int &dbuffer::value(unsigned int index) {
+int &dbuffer::value(size_type index) {
 
     assert(index < this -> _size);
     return this -> _buffer[index];
 
 }
 
-const int &dbuffer::value(unsigned int index) const {
+const int &dbuffer::value(size_type index) const {
 
     assert(index < this -> _size);
     return this -> _buffer[index];
 
 }
 
-unsigned int dbuffer::size() const {
+// Without the namespace... the compiler is gonna try to search on the globals size_type
+// because it's a return type
+dbuffer::size_type dbuffer::size() const {
 
     return this -> _size;
 
@@ -143,7 +145,7 @@ dbuffer& dbuffer::operator=(const dbuffer &rhs) {
         _buffer = tmp;
         _size = rhs._size;
 
-        for (unsigned int i = 0; i < _size; ++i) {
+        for (size_type i = 0; i < _size; ++i) {
             tmp[i] = rhs._buffer[i];
         }
 
@@ -167,7 +169,7 @@ dbuffer& dbuffer::operator=(const dbuffer &rhs) {
         _buffer = new int[rhs._size];
         _size = rhs._size;
 
-        for (unsigned int i = 0; i < _size; ++i) {
+        for (size_type i = 0; i < _size; ++i) {
             _buffer[i] = rhs._buffer[i];
         }
 
@@ -189,7 +191,7 @@ dbuffer::dbuffer(const dbuffer &other) : _size(0), _buffer(nullptr) {
 
     _buffer = new int[other._size];
 
-    for (unsigned int i = 0; i < other._size; ++i) {
+    for (size_type i = 0; i < other._size; ++i) {
         _buffer[i] = other._buffer[i];
     }
 

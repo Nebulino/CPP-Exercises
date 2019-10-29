@@ -7,11 +7,14 @@
 
 
 class dbuffer {
+public:
+    // To mask the type... and expose something else...
+    typedef unsigned int size_type;
 
     // All the constructors change the class state
 
 private:
-    unsigned int _size;
+    size_type _size;
     int *_buffer;
 
     // Before public is already private but you can use `private:`
@@ -26,9 +29,9 @@ public:
     // If I want to create a class with one param... It needs to be explicit... With this keyword...
     // Implicit calls are not permitted... such as
     // db4 = 5; => db4 = dbuffer(5)
-    explicit dbuffer(unsigned int size);
+    explicit dbuffer(size_type size);
 
-    dbuffer(unsigned int size, int value);
+    dbuffer(size_type size, int value);
 
     // Default 2: Destructor
     // Never call the destructor explicitly
@@ -36,21 +39,21 @@ public:
 
     // Value Getter and Setter
 
-    int getValue(unsigned int index) const;
+    int getValue(size_type index) const;
 
-    void setValue(unsigned int index, int value);
+    void setValue(size_type index, int value);
 
     // Not secure for modify stuff...
-    int &value(unsigned int index);
+    int &value(size_type index);
     // Secure one...
-    const int &value(unsigned int index) const;
+    const int &value(size_type index) const;
     // With the same... in the compiler... We can only use the const one...
     // Class Const-ness
     // Also if we use a const method, the utilizer needs to be const as well...
 
 
     // This method is not changing the class state => const at the end
-    unsigned int size() const;
+    size_type size() const;
 
     // Default 3: Operator= "Assignment"3
     // RightHandSide

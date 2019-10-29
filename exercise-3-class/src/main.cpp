@@ -8,6 +8,8 @@
 
 #include "dbuffer.h"
 
+typedef unsigned int size_type;
+
 void funct1(dbuffer d) {
 
     std::cout << " === Function 1 === " << std::endl;
@@ -17,7 +19,7 @@ void funct1(dbuffer d) {
 void funct2(const dbuffer &d) {
 
     std::cout << " === Function 2 === " << std::endl;
-    for (unsigned int i = 0; i < d.size(); ++i) {
+    for (size_type i = 0; i < d.size(); ++i) {
 
         std::cout << "d.value := " << d.value(i) << std::endl;
 
@@ -68,7 +70,7 @@ int main(int argc, char *argv[]) {
     db4 = db2;
     assert(db4.size() == db2.size());
 
-    for (unsigned int i = 0; i < db4.size(); ++i) {
+    for (size_type i = 0; i < db4.size(); ++i) {
         assert(db4.value(i) == db2.value(i));
     }
 

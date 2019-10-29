@@ -8,10 +8,12 @@
 
 ../include/dbuffer.h
 
-/Users/lillie/University/C++/CPP-Exercises/exercise-3-class/src/main.cpp
+/Users/lillie/University/C++/CPP-Exercises/exercise-3-class/src/dbuffer.cpp
 iostream
 -
 cassert
+-
+algorithm
 -
 dbuffer.h
 /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/src/dbuffer.h
