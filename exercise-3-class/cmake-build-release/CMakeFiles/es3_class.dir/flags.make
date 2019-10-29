@@ -6,5 +6,5 @@ CXX_FLAGS = -O3   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/lillie/University/C++/es3-class/include 
+CXX_INCLUDES = -I/Users/lillie/University/C++/CPP-Exercises/exercise-3-class/include 
 

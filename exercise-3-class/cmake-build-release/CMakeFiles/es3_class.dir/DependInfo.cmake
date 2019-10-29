@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/lillie/University/C++/es3-class/src/dbuffer.cpp" "/Users/lillie/University/C++/es3-class/cmake-build-release/CMakeFiles/es3_class.dir/src/dbuffer.cpp.o"
-  "/Users/lillie/University/C++/es3-class/src/main.cpp" "/Users/lillie/University/C++/es3-class/cmake-build-release/CMakeFiles/es3_class.dir/src/main.cpp.o"
+  "/Users/lillie/University/C++/CPP-Exercises/exercise-3-class/src/dbuffer.cpp" "/Users/lillie/University/C++/CPP-Exercises/exercise-3-class/cmake-build-release/CMakeFiles/es3_class.dir/src/dbuffer.cpp.o"
+  "/Users/lillie/University/C++/CPP-Exercises/exercise-3-class/src/main.cpp" "/Users/lillie/University/C++/CPP-Exercises/exercise-3-class/cmake-build-release/CMakeFiles/es3_class.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

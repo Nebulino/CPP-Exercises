@@ -34,7 +34,7 @@ public:
 
     unsigned int size();
 
-    // Default 3: Operator= "Assignment"
+    // Default 3: Operator= "Assignment"3
     // RightHandSide
 
     /**

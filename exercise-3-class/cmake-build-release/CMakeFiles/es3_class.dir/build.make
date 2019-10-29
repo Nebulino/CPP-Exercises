@@ -43,10 +43,10 @@ RM = "/Users/lillie/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lillie/University/C++/es3-class
+CMAKE_SOURCE_DIR = /Users/lillie/University/C++/CPP-Exercises/exercise-3-class
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lillie/University/C++/es3-class/cmake-build-release
+CMAKE_BINARY_DIR = /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/cmake-build-release
 
 # Include any dependencies generated for this target.
 include CMakeFiles/es3_class.dir/depend.make
@@ -59,29 +59,29 @@ include CMakeFiles/es3_class.dir/flags.make
 
 CMakeFiles/es3_class.dir/src/dbuffer.cpp.o: CMakeFiles/es3_class.dir/flags.make
 CMakeFiles/es3_class.dir/src/dbuffer.cpp.o: ../src/dbuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lillie/University/C++/es3-class/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/es3_class.dir/src/dbuffer.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/es3_class.dir/src/dbuffer.cpp.o -c /Users/lillie/University/C++/es3-class/src/dbuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lillie/University/C++/CPP-Exercises/exercise-3-class/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/es3_class.dir/src/dbuffer.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/es3_class.dir/src/dbuffer.cpp.o -c /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/src/dbuffer.cpp
 
 CMakeFiles/es3_class.dir/src/dbuffer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/es3_class.dir/src/dbuffer.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lillie/University/C++/es3-class/src/dbuffer.cpp > CMakeFiles/es3_class.dir/src/dbuffer.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/src/dbuffer.cpp > CMakeFiles/es3_class.dir/src/dbuffer.cpp.i
 
 CMakeFiles/es3_class.dir/src/dbuffer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/es3_class.dir/src/dbuffer.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lillie/University/C++/es3-class/src/dbuffer.cpp -o CMakeFiles/es3_class.dir/src/dbuffer.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/src/dbuffer.cpp -o CMakeFiles/es3_class.dir/src/dbuffer.cpp.s
 
 CMakeFiles/es3_class.dir/src/main.cpp.o: CMakeFiles/es3_class.dir/flags.make
 CMakeFiles/es3_class.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lillie/University/C++/es3-class/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/es3_class.dir/src/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/es3_class.dir/src/main.cpp.o -c /Users/lillie/University/C++/es3-class/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/lillie/University/C++/CPP-Exercises/exercise-3-class/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/es3_class.dir/src/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/es3_class.dir/src/main.cpp.o -c /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/src/main.cpp
 
 CMakeFiles/es3_class.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/es3_class.dir/src/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lillie/University/C++/es3-class/src/main.cpp > CMakeFiles/es3_class.dir/src/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/src/main.cpp > CMakeFiles/es3_class.dir/src/main.cpp.i
 
 CMakeFiles/es3_class.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/es3_class.dir/src/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lillie/University/C++/es3-class/src/main.cpp -o CMakeFiles/es3_class.dir/src/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/src/main.cpp -o CMakeFiles/es3_class.dir/src/main.cpp.s
 
 # Object files for target es3_class
 es3_class_OBJECTS = \
@@ -95,7 +95,7 @@ es3_class: CMakeFiles/es3_class.dir/src/dbuffer.cpp.o
 es3_class: CMakeFiles/es3_class.dir/src/main.cpp.o
 es3_class: CMakeFiles/es3_class.dir/build.make
 es3_class: CMakeFiles/es3_class.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lillie/University/C++/es3-class/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable es3_class"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lillie/University/C++/CPP-Exercises/exercise-3-class/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable es3_class"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/es3_class.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -108,6 +108,6 @@ CMakeFiles/es3_class.dir/clean:
 .PHONY : CMakeFiles/es3_class.dir/clean
 
 CMakeFiles/es3_class.dir/depend:
-	cd /Users/lillie/University/C++/es3-class/cmake-build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lillie/University/C++/es3-class /Users/lillie/University/C++/es3-class /Users/lillie/University/C++/es3-class/cmake-build-release /Users/lillie/University/C++/es3-class/cmake-build-release /Users/lillie/University/C++/es3-class/cmake-build-release/CMakeFiles/es3_class.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/cmake-build-release && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lillie/University/C++/CPP-Exercises/exercise-3-class /Users/lillie/University/C++/CPP-Exercises/exercise-3-class /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/cmake-build-release /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/cmake-build-release /Users/lillie/University/C++/CPP-Exercises/exercise-3-class/cmake-build-release/CMakeFiles/es3_class.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/es3_class.dir/depend
 
