@@ -4,7 +4,28 @@
 
 
 #include <iostream>
+#include <cassert>
+
 #include "dbuffer.h"
+
+void funct1(dbuffer d) {
+
+    std::cout << "Funct1" << std::endl;
+
+}
+
+void funct2(dbuffer &d) {
+
+    std::cout << "Funct2" << std::endl;
+
+}
+
+void funct3(dbuffer *d) {
+
+    std::cout << "Funct3" << std::endl;
+
+}
+
 
 int main(int argc, char *argv[]) {
 
@@ -38,6 +59,29 @@ int main(int argc, char *argv[]) {
     // if db2 is being destroyed, db4 array's pointer is also being destroyed
     // So... never use:=        db4 = db2;
     // But use :=               operator=
+
+    db4 = db2;
+    assert(db4.size() == db2.size());
+
+    for (int i = 0; i < db4.size(); ++i) {
+        assert(db4.value(i) == db2.value(i));
+    }
+
+    // Instead of db4 = 5;
+    db4 = dbuffer(5);
+
+    dbuffer db5;
+
+    // By passing => copy constructor 2 new 2 destroyers
+    funct1(db5);
+
+    // By pointer => pointer data 1 new 1 destroyer
+    funct2(db5);
+
+    // By reference => source data 1 new 1 destroyer
+    funct3(&db5);
+
+    dbuffer db6(db5);
 
     return 0;
 }

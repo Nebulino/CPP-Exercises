@@ -20,11 +20,16 @@ public:
     dbuffer();
 
     // Secondary Constructor
+    // One Param constructors can be used as implicit conversion...
+    // If I want to create a class with one param... It needs to be explicit... With this keyword...
+    // Implicit calls are not permitted... such as
+    // db4 = 5; => db4 = dbuffer(5)
     explicit dbuffer(unsigned int size);
 
     dbuffer(unsigned int size, int value);
 
     // Default 2: Destructor
+    // Never call the destructor explicitly
     ~dbuffer();
 
     // Value Getter and Setter
@@ -44,6 +49,9 @@ public:
      */
     dbuffer& operator=(const dbuffer& rhs);
 
+    // Default 4: Copy Constructor
+
+    dbuffer(const dbuffer &other);
 
 };
 

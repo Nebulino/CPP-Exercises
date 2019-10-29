@@ -4,15 +4,22 @@
 
 #include <iostream>
 #include <cassert>
+#include <algorithm>
 
 #include "dbuffer.h"
 
 
 // Always put qualifier-id
-dbuffer::dbuffer() {
+dbuffer::dbuffer() : _size(0), _buffer(nullptr) {
 
-    _size = 0;
-    _buffer = nullptr;
+    // A way to initialize... before the assignment... by initialization list... using [ : ]
+    // calling a copy_constructor to the member variables...
+    // : _size(0), _buffer(nullptr)  means int _size = 0; etc...
+    // Executed before the constructor itself
+
+    // Another way...
+    // _size = 0;
+    // _buffer = nullptr;
 
 #ifndef NDEBUG
     std::cout << "dbuffer::dbuffer()" << std::endl;
@@ -20,7 +27,11 @@ dbuffer::dbuffer() {
 
 }
 
-dbuffer::dbuffer(unsigned int size) {
+dbuffer::dbuffer(unsigned int size) : _size(0), _buffer(nullptr) {
+
+    // Make object coherent state === operations ===
+    // _size = 0;
+    // _buffer = nullptr;
 
     _buffer = new int[size];
     this -> _size = size;
@@ -31,7 +42,11 @@ dbuffer::dbuffer(unsigned int size) {
 
 }
 
-dbuffer::dbuffer(unsigned int size, int value) {
+dbuffer::dbuffer(unsigned int size, int value) : _size(0), _buffer(nullptr) {
+
+    // Make object coherent state === operations ===
+    // _size = 0;
+    // _buffer = nullptr;
 
     _buffer = new int[size];
     this -> _size = size;
@@ -89,6 +104,23 @@ unsigned int dbuffer::size() {
 
 dbuffer& dbuffer::operator=(const dbuffer &rhs) {
 
+    /// TRUE WAY ///
+
+    if (this != &rhs) {
+
+        dbuffer tmp(rhs); // It fails and it keeps the original in a coherent state
+
+        // Use <algorithm> => swap
+        std::swap(this -> _buffer, tmp._buffer); // Swapping content
+        std::swap(this -> _size, tmp._size);
+
+        // when going out... tmp automatically
+
+    }
+
+
+    /// ANOTHER WAY ///
+    /*
     // this is the lhs (left hand size)
 
     // Check if rhs is not this, by using pointers.
@@ -114,6 +146,8 @@ dbuffer& dbuffer::operator=(const dbuffer &rhs) {
         _buffer = tmp;
         _size = rhs._size;
 
+        */
+
         /// PROBLEMS - MEMORY RECOVERY ///
         /* Not a good way...Because of the coherent state problem...
         delete[] _buffer;
@@ -130,9 +164,9 @@ dbuffer& dbuffer::operator=(const dbuffer &rhs) {
             _buffer[i] = rhs._buffer[i];
         }
 
-        */
 
-    }
+
+    } */
 
     return *this; // I need do de-reference it...
 
@@ -140,3 +174,22 @@ dbuffer& dbuffer::operator=(const dbuffer &rhs) {
 
 }
 
+dbuffer::dbuffer(const dbuffer &other) : _size(0), _buffer(nullptr) {
+
+    // Make object coherent state === operations ===
+    // _size = 0;
+    // _buffer = nullptr;
+
+    _buffer = new int[other._size];
+
+    for (int i = 0; i < other._size; ++i) {
+        _buffer[i] = other._buffer[i];
+    }
+
+    _size = other._size;
+
+#ifndef NDEBUG
+    std::cout << "dbuffer::dbuffer(const dbuffer &other)" << std::endl;
+#endif
+
+}
