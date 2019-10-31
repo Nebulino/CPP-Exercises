@@ -5,6 +5,8 @@
 #ifndef ES3_CLASS_DBUFFER_H
 #define ES3_CLASS_DBUFFER_H
 
+#include <ostream>
+
 
 class dbuffer {
 public:
@@ -69,7 +71,32 @@ public:
 
     dbuffer(const dbuffer &other);
 
+    void print() const;
+
+    // New [] signature
+    // operator[]("" how to index-ize the [] operator input content"")
+    // Gonna send an index
+    int &operator[](size_type index);
+
+    // const version := read-only
+    const int &operator[](size_type index) const;
+
 };
+
+
+/// New << signature ///
+/// GLOBAL ///
+// os << db << std::endl;
+// << is called stream operator
+std::ostream & operator<<(
+
+    // left hand param
+    std::ostream &os,
+    // right hand param
+    const dbuffer &db
+
+);
+// std::cout is from ostream...
 
 
 #endif //ES3_CLASS_DBUFFER_H

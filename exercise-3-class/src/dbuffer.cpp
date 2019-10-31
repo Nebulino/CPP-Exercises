@@ -202,3 +202,48 @@ dbuffer::dbuffer(const dbuffer &other) : _size(0), _buffer(nullptr) {
 #endif
 
 }
+
+void dbuffer::print() const {
+
+    std::cout << " === dbuffer print === " << std::endl;
+    std::cout << "Dimension: " << _size << std::endl << "Content: ";
+
+    for (size_type i = 0; i < _size; ++i) {
+        std::cout << _buffer[i] << " ";
+    }
+
+    std::cout << std::endl;
+
+}
+
+// Good to have for container's classes
+// Stream Operator
+std::ostream & operator<<(std::ostream &os, const dbuffer &db) {
+
+    os << db.size() << std::endl;
+
+    for (dbuffer::size_type i = 0; i < db.size(); ++i) {
+
+        os << db.value(i) << " ";
+
+    }
+
+    os << std::endl;
+
+}
+
+int &dbuffer::operator[](dbuffer::size_type index) {
+
+    assert(index < _size);
+
+    return _buffer[index];
+
+}
+
+const int &dbuffer::operator[](dbuffer::size_type index) const {
+
+    assert(index < _size);
+
+    return _buffer[index];
+
+}

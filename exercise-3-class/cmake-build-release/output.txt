@@ -1,0 +1,6 @@
+db5
+Dimension: 5
+Content: 0 0 0 0 0 
+ Injecting directly... 
+5
+0 0 0 0 0 
