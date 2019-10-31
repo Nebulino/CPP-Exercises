@@ -6,6 +6,8 @@
 #include <iostream>
 #include <cassert>
 #include <fstream>
+#include <sstream>
+#include <string>
 
 #include "dbuffer.h"
 
@@ -47,6 +49,7 @@ int main(int argc, char *argv[]) {
      * dbuffer db3(10,0);
      */
 
+    /*
     dbuffer db[5]; // 5 Constructor and 5 Destructor
 
     dbuffer db2(100);
@@ -118,6 +121,34 @@ int main(int argc, char *argv[]) {
 
     // It seems an array... but it's a complex object
     db5[0] = db5[1];
+
+
+    */
+
+    /// OTHER ///
+    // Create a src > save it on a file > from that create a dst
+
+    dbuffer src(5, 9999);
+    std::ofstream ofs;
+    ofs.open("save.txt");
+    ofs << src;
+    ofs.close();
+
+    std::ifstream infile("save.txt");
+    dbuffer::size_type size;
+    infile >> size;
+
+    dbuffer dst(size);
+
+    for (dbuffer::size_type i = 0; i < size; ++i) {
+        infile >> dst[i];
+    }
+
+    infile.close();
+
+    std::cout << dst << std::endl;
+
+
 
     return 0;
 }

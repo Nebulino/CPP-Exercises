@@ -34,7 +34,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="18f78079-1936-4073-9dd5-1e74b7d999fe" name="Default Changelist" comment="" />
+    <list default="true" id="18f78079-1936-4073-9dd5-1e74b7d999fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/es3_class" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/es3_class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,14 +60,14 @@
     <expand />
     <select />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+            <state relative-caret-position="739">
+              <caret line="143" column="12" lean-forward="true" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
               <folding>
                 <element signature="e#44#63#0" expanded="true" />
               </folding>
@@ -72,11 +75,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmake-build-debug/save.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dbuffer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="230" column="35" lean-forward="true" selection-start-line="230" selection-start-column="35" selection-end-line="230" selection-end-column="35" />
+            <state relative-caret-position="-9">
+              <caret line="212" column="5" selection-start-line="212" selection-start-column="5" selection-end-line="212" selection-end-column="5" />
               <folding>
                 <element signature="e#43#62#0" expanded="true" />
               </folding>
@@ -87,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/dbuffer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="87" column="29" lean-forward="true" selection-start-line="87" selection-end-line="88" />
+            <state relative-caret-position="541">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
             </state>
           </provider>
         </entry>
@@ -121,14 +133,14 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/snippets/tests.cpp" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/tests/unittest.cpp" />
-        <option value="$PROJECT_DIR$/include/dbuffer.h" />
         <option value="$PROJECT_DIR$/src/dbuffer.cpp" />
+        <option value="$PROJECT_DIR$/include/dbuffer.h" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="913" />
     <option name="width" value="937" />
     <option name="height" value="1088" />
@@ -145,6 +157,11 @@
             <path>
               <item name="es3_class" type="b2602c69:ProjectViewProjectNode" />
               <item name="exercise-3-class" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="es3_class" type="b2602c69:ProjectViewProjectNode" />
+              <item name="exercise-3-class" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="es3_class" type="b2602c69:ProjectViewProjectNode" />
@@ -220,7 +237,7 @@
       <workItem from="1571927107938" duration="6302000" />
       <workItem from="1572342478273" duration="3546000" />
       <workItem from="1572346459121" duration="3308000" />
-      <workItem from="1572533174807" duration="6428000" />
+      <workItem from="1572533174807" duration="7661000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing intendation...">
       <created>1571931576565</created>
@@ -233,7 +250,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22091000" />
+    <option name="totallyTimeSpent" value="23324000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -245,22 +262,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1858" height="1096" extended-state="6" />
+    <frame x="913" y="0" width="937" height="1088" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19911012" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21550742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.52232605" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.52146596" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946752" weight="0.39875388" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32982087" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TeamCity" order="8" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.4475597" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.44712043" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32982087" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005325" side_tool="true" weight="0.39936775" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
@@ -321,29 +338,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+    <entry file="file://$PROJECT_DIR$/src/dbuffer.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        <state relative-caret-position="-9">
+          <caret line="212" column="5" selection-start-line="212" selection-start-column="5" selection-end-line="212" selection-end-column="5" />
           <folding>
-            <element signature="e#44#63#0" expanded="true" />
+            <element signature="e#43#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include/dbuffer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="87" column="29" lean-forward="true" selection-start-line="87" selection-end-line="88" />
+        <state relative-caret-position="541">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dbuffer.cpp">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/save.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="230" column="35" lean-forward="true" selection-start-line="230" selection-start-column="35" selection-end-line="230" selection-end-column="35" />
+        <state relative-caret-position="44">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="143" column="12" lean-forward="true" selection-start-line="143" selection-start-column="12" selection-end-line="143" selection-end-column="12" />
           <folding>
-            <element signature="e#43#62#0" expanded="true" />
+            <element signature="e#44#63#0" expanded="true" />
           </folding>
         </state>
       </provider>
