@@ -90,6 +90,8 @@ public:
 // << is called stream operator
 std::ostream & operator<<(
 
+        // TODO: For a complete serialization, we can give private access...
+
     // left hand param
     std::ostream &os,
     // right hand param
