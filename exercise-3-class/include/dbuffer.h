@@ -81,6 +81,19 @@ public:
     // const version := read-only
     const int &operator[](size_type index) const;
 
+    // This operator is a friendly function to the class...
+    // A global function can access to private part of this class
+    friend std::ostream & operator<<(
+
+            // TODO: For a complete serialization, we can give private access...
+
+            // left hand param
+            std::ostream &os,
+            // right hand param
+            const dbuffer &db
+
+    );
+
 };
 
 
