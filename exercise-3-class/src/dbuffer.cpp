@@ -222,9 +222,13 @@ std::ostream & operator<<(std::ostream &os, const dbuffer &db) {
 
     os << db.size() << std::endl;
 
-    for (dbuffer::size_type i = 0; i < db.size(); ++i) {
+    // from:
+    // for (dbuffer::size_type i = 0; i < db.size(); ++i) {
+    for (dbuffer::size_type i = 0; i < db._size; ++i) {
 
-        os << db.value(i) << " ";
+        // from:
+        // os << db.value(i) << " ";
+        os << db._buffer[i] << " ";
 
     }
 

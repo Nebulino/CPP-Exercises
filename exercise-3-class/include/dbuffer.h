@@ -83,16 +83,7 @@ public:
 
     // This operator is a friendly function to the class...
     // A global function can access to private part of this class
-    friend std::ostream & operator<<(
-
-            // TODO: For a complete serialization, we can give private access...
-
-            // left hand param
-            std::ostream &os,
-            // right hand param
-            const dbuffer &db
-
-    );
+    friend std::ostream & operator<<(std::ostream &os, const dbuffer &db);
 
 };
 
