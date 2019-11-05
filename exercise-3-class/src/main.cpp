@@ -5,6 +5,9 @@
 
 #include <iostream>
 #include <cassert>
+#include <fstream>
+#include <sstream>
+#include <string>
 
 #include "dbuffer.h"
 
@@ -12,13 +15,15 @@ typedef unsigned int size_type;
 
 void funct1(dbuffer d) {
 
-    std::cout << " === Function 1 === " << std::endl;
+    std::cout << " ===  Function  1  === " << std::endl;
 
 }
 
 void funct2(const dbuffer &d) {
 
-    std::cout << " === Function 2 === " << std::endl;
+    std::cout << " ===  Function  2  === " << std::endl;
+    std::cout << "d.size: " << d.size() << std::endl;
+
     for (size_type i = 0; i < d.size(); ++i) {
 
         std::cout << "d.value := " << d.value(i) << std::endl;
@@ -29,7 +34,7 @@ void funct2(const dbuffer &d) {
 
 void funct3(dbuffer *d) {
 
-    std::cout << " === Function 3 === " << std::endl;
+    std::cout << " ===  Function  3  === " << std::endl;
 
 }
 
@@ -44,6 +49,7 @@ int main(int argc, char *argv[]) {
      * dbuffer db3(10,0);
      */
 
+    /*
     dbuffer db[5]; // 5 Constructor and 5 Destructor
 
     dbuffer db2(100);
@@ -89,6 +95,60 @@ int main(int argc, char *argv[]) {
     funct3(&db5);
 
     dbuffer db6(db5);
+
+    db5.print();
+
+    // Open Stream
+    // Up-casting because ofstream is a children of ostream := the inputs are compatible
+    std::ofstream ofs;
+    // Creates a file called output.txt if not exists
+    ofs.open("output.txt");
+
+    ofs << "db5" <<  std::endl << "Dimension: " << db5.size() << std::endl << "Content: ";
+
+    // serialization
+    for (size_type i = 0; i < db5.size(); ++i) {
+        ofs << db5.value(i) << " ";
+    }
+
+    ofs << std::endl;
+
+    ofs << " Injecting directly... " << std::endl;
+    ofs << db5;
+
+    // Closing ofstream
+    ofs.close();
+
+    // It seems an array... but it's a complex object
+    db5[0] = db5[1];
+
+
+    */
+
+    /// OTHER ///
+    // Create a src > save it on a file > from that create a dst
+
+    dbuffer src(5, 9999);
+    std::ofstream ofs;
+    ofs.open("save.txt");
+    ofs << src;
+    ofs.close();
+
+    std::ifstream infile("save.txt");
+    dbuffer::size_type size;
+    infile >> size;
+
+    dbuffer dst(size);
+
+    for (dbuffer::size_type i = 0; i < size; ++i) {
+        infile >> dst[i];
+    }
+
+    infile.close();
+
+    std::cout << dst << std::endl;
+
+
 
     return 0;
 }

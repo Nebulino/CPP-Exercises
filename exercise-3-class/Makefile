@@ -10,7 +10,7 @@ INC=-I./include
 run_me: ./build/main.o ./build/dbuffer.o
 	g++ ./build/dbuffer.o ./build/main.o -o ./run_me
 
-./build/main.o: ./src/main.cpp $(INC)/dbuffer.h
+./build/main.o: tests $(INC)/dbuffer.h
 	g++ -c $(CXXFLAGS) ./src/main.cpp -o ./build/main.o
 
 ./build/dbuffer.o: ./src/dbuffer.cpp $(INC)/dbuffer.h

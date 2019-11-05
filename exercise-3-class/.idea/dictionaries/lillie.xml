@@ -1,8 +1,11 @@
 <component name="ProjectDictionaryState">
-  <dictionary name="lillie">
+  <dictionary name="Lillie">
     <words>
-      <w>dbuffer</w>
-      <w>nebulino</w>
+      <w>constructiors</w>
+      <w>cout</w>
+      <w>endl</w>
+      <w>ofstream</w>
+      <w>ostream</w>
     </words>
   </dictionary>
 </component>
