@@ -1,0 +1,3 @@
+/Users/lillie/University/C++/CPP-Exercises/exercise-4-phonebook/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/lillie/University/C++/CPP-Exercises/exercise-4-phonebook/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/lillie/University/C++/CPP-Exercises/exercise-4-phonebook/cmake-build-debug/CMakeFiles/exercise_4_phonebook.dir
