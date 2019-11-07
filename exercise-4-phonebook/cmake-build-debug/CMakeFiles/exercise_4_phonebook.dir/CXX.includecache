@@ -6,21 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../include/phonebook.h
-voice.h
-../include/voice.h
-
-../include/voice.h
-string
+/Users/lillie/University/C++/CPP-Exercises/exercise-4-phonebook/src/main.cpp
+iostream
 -
-ostream
--
-
-/Users/lillie/University/C++/CPP-Exercises/exercise-4-phonebook/src/phonebook.cpp
-algorithm
--
-phonebook.h
--
-phonebook.h
-/Users/lillie/University/C++/CPP-Exercises/exercise-4-phonebook/src/phonebook.h
 

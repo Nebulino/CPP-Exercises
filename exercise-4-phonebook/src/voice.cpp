@@ -20,8 +20,8 @@ voice::voice(
 }
 
 std::ostream& operator<<(
-        std::ostream& os,
-        const voice& voice
+        std::ostream &os,
+        const voice &voice
         ) {
 
     os << voice.surname << " "    <<

@@ -110,12 +110,14 @@ phonebook::size_type phonebook::capacity() const {
 
 voice &phonebook::operator[](size_type index) {
 
+    assert(index < _size);
     return _voices[index];
 
 }
 
 const voice &phonebook::operator[](phonebook::size_type index) const {
 
+    assert(index < _size);
     return _voices[index];
 
 }
@@ -132,8 +134,20 @@ void phonebook::add_voice(const voice &voice_to_insert) {
 
     if (_size < _capacity) {
 
-        _voices[_size] = voice_to_insert;
-        _size++;
+        voice *tmp = nullptr;
+        tmp = find_voice_helper(voice_to_insert.telephone_number);
+
+        if (tmp == nullptr) {
+
+            _voices[_size] = voice_to_insert;
+            _size++;
+
+        }
+
+        else {
+
+            throw duplicated_voice_exception();
+        }
 
     }
 
@@ -147,4 +161,71 @@ void phonebook::add_voice(const voice &voice_to_insert) {
 
 }
 
+voice phonebook::find_voice(const std::string &telephone_number) const {
+
+    voice *result = nullptr;
+    result = find_voice_helper(telephone_number);
+
+    if (result == nullptr) {
+
+        throw duplicated_voice_exception();
+
+    }
+
+    else {
+
+        return *result;
+
+    }
+
+}
+
+void phonebook::clear() {
+
+    // Is a conceptual clear... so we can't use it on the destroyer
+    _size = 0;
+
+}
+
+
+voice *phonebook::find_voice_helper(const std::string &telephone_number) const {
+
+    size_type i;
+
+    for (i = 0; i < _size; ++i) {
+
+        if (telephone_number == _voices[i].telephone_number) {
+
+            return &(_voices[i]);
+        }
+
+    }
+
+    return nullptr;
+
+}
+
+
+std::ostream &operator<<(std::ostream &os, const phonebook &pb)  {
+
+    os << pb.capacity() << std::endl;
+    os << pb.size() << std::endl;
+
+    for (phonebook::size_type i = 0; i < pb.size(); ++i) {
+
+        os << pb[i];
+
+        if (i < pb.size() -1) {
+
+            os << std::endl;
+
+        }
+
+        // TODO: I want to remove the last endline...
+
+    }
+
+    return os;
+
+};
 

@@ -5,15 +5,24 @@
 #ifndef EXERCISE_4_PHONEBOOK_PHONEBOOK_H
 #define EXERCISE_4_PHONEBOOK_PHONEBOOK_H
 
+
+#include <ostream>
+
 #include "voice.h"
 
-class phonebook_out_of_space_exception{
+
+// Exceptions
+class phonebook_out_of_space_exception {
 
     // I need only the name to throw...
 
 };
 
+class duplicated_voice_exception {
 
+};
+
+// PhoneBook Class
 class phonebook {
 
 public:
@@ -24,6 +33,8 @@ private:
     voice* _voices;
 
     size_type _capacity;
+
+    voice *find_voice_helper(const std::string &telephone_number) const;
 
 public:
     phonebook();
@@ -58,6 +69,13 @@ public:
 
     void add_voice(const voice &voice_to_insert);
 
+    voice find_voice(const std::string &telephone_number) const;
+
+    void clear();
+
 };
+
+
+std::ostream &operator<<(std::ostream &os, const phonebook &p);
 
 #endif //EXERCISE_4_PHONEBOOK_PHONEBOOK_H
