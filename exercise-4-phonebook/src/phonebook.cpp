@@ -4,10 +4,10 @@
 
 #include <algorithm>
 #include <cassert>
-#include <phonebook.h>
-
+#include <fstream>
 
 #include "phonebook.h"
+
 
 phonebook::phonebook() : _size(0), _capacity(0), _voices(nullptr) {};
 
@@ -186,6 +186,78 @@ void phonebook::clear() {
     _size = 0;
 
 }
+
+void phonebook::save(const std::string &filename) const {
+
+    std::ofstream ofstream;
+
+    ofstream.open(filename);
+
+    if (ofstream.is_open()) {
+
+        ofstream << *this;
+
+    }
+
+    else {
+
+        throw file_error_exception();
+
+    }
+
+    ofstream.close();
+
+};
+
+bool phonebook::load(const std::string &filename) const {
+
+    std::ifstream ifstream;
+
+    if (ifstream.is_open()) {
+
+        size_type cap, sz;
+        ifstream >> cap;
+        ifstream >> sz;
+
+        phonebook tmp;
+
+        // If this fails, this is still untouched
+        tmp.set_capacity(cap);
+
+        size_type i;
+
+        for (i = 0; i < sz; ++i) {
+
+            std::string surname, name, phone_number;
+            ifstream >> surname;
+            ifstream >> name;
+            ifstream >> phone_number;
+
+            tmp.add_voice(surname, name, phone_number);
+
+            // We also have add_voice with...
+            // voice v(surname, name, phone_number);
+            // tmp.add_voice(v);
+
+        }
+
+        std::swap(_voices, tmp._voices);
+        std::swap(_size, tmp._size);
+        std::swap(_capacity, tmp._capacity);
+
+    }
+
+    else {
+
+        return false;
+
+    }
+
+    ifstream.close();
+
+    return true;
+
+};
 
 
 voice *phonebook::find_voice_helper(const std::string &telephone_number) const {

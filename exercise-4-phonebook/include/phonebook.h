@@ -22,6 +22,11 @@ class duplicated_voice_exception {
 
 };
 
+class file_error_exception {
+
+};
+
+
 // PhoneBook Class
 class phonebook {
 
@@ -72,6 +77,10 @@ public:
     voice find_voice(const std::string &telephone_number) const;
 
     void clear();
+
+    void save(const std::string &filename) const;
+
+    bool load(const std::string &filename) const;
 
 };
 
