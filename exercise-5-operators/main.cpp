@@ -99,7 +99,7 @@ public:
         return result;
 
     }
-    
+
     /*
      * Strange Unary Operators...
      * i++ ++i --i i--
@@ -133,6 +133,17 @@ public:
         // My new re-defined operator--
         --(*this);
         return tmp;
+    }
+
+    /* Custom function...
+     * Unary Operator
+     * For => double f = *c;
+     * Source value not changed => const
+     */
+    double operator*() const {
+
+        return 1.0 / static_cast<double>(value);
+
     }
 
 };
@@ -235,6 +246,8 @@ int main() {
     Integer x = 1 + c;
 
     bool ok = c == b;
+
+    double f = *c; // => 1/c.get_value
 
     return 0;
 }
