@@ -146,8 +146,21 @@ public:
 
     }
 
-    // TODO: Integer => int
+    Integer(int i) : value(i) {}
 
+    /* TODO: Integer => int
+     * for int i = c
+     *
+     * No changing state => const
+     *
+     * Cast-type Operator... A special one...
+     * Can be used also with others. char, etc...
+     */
+    operator int() const {
+
+        return value;
+
+    }
 };
 
 /// Globals...
@@ -250,6 +263,8 @@ int main() {
     bool ok = c == b;
 
     double f = *c; // => 1/c.get_value
+
+    i = c;
 
     return 0;
 }
