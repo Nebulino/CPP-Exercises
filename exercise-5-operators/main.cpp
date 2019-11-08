@@ -146,7 +146,7 @@ public:
 
     }
 
-    explicit Integer(int i) : value(i) {}
+    Integer(int i) : value(i) {}
 
     /* TODO: Integer => int
      * for int i = c
