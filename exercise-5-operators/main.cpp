@@ -146,7 +146,7 @@ public:
 
     }
 
-    Integer(int i) : value(i) {}
+    explicit Integer(int i) : value(i) {}
 
     /* TODO: Integer => int
      * for int i = c
@@ -161,6 +161,12 @@ public:
         return value;
 
     }
+
+    /*
+     * Also new and delete[] can be re-defined...
+     * new => re-define a new mechanism of alloc in the heap
+     *      e.g. = alloc on a file, on another place like on the stack, etc...
+     */
 };
 
 /// Globals...
