@@ -1,10 +1,10 @@
 #include <iostream>
 
 /* Operators
- * 1 Operator
+ * Unary Operators - 1 Operator
  * !@ -@ @[] *@
  *
- * 2 Operators
+ * Binary Operatos - 2 Operators
  * @+@ @=@ << && > <=
  *
  * Can't be re-defined...
@@ -99,6 +99,41 @@ public:
         return result;
 
     }
+    
+    /*
+     * Strange Unary Operators...
+     * i++ ++i --i i--
+     *
+     * With different syntax because I can't diversify pre and post operator...
+     */
+
+    /* Pre-Decrement...
+     * => --i
+     * We are outside... so the output is the input
+     */
+    Integer &operator--() {
+
+        // value = value - 1;
+        --value;
+        return *this;
+
+    }
+
+    /* Post-Decrement...
+     * => i--
+     * We are outside... so the output is the input created as copy...
+     *
+     * To differentiate with --i... we put a fake int parameter
+     */
+    Integer operator--(int) {
+
+        // Copy-constructor...
+        Integer tmp = *this;
+
+        // My new re-defined operator--
+        --(*this);
+        return tmp;
+    }
 
 };
 
@@ -143,6 +178,40 @@ bool operator==(const Integer &lhs, const Integer &rhs) {
 
 }
 
+/*
+ * Strange Unary Operators...
+ * i++ ++i --i i--
+ *
+ * With different syntax because I can't diversify pre and post operator...
+ */
+
+/* Pre-Increment...
+ * => ++i
+ * We are outside... so the output is the input
+ */
+Integer &operator++(Integer &i) {
+
+   i = i.get_value() + 1;
+   return i;
+
+}
+
+/* Post-Increment...
+ * => i--
+ * We are outside... so the output is the input created as copy...
+ *
+ * To differentiate with ++i... we put a fake int parameter
+ */
+Integer operator++(Integer &i, int) {
+
+    // Copy-constructor...
+    Integer tmp = i;
+
+    // My new re-defined operator++
+    ++i;
+    return tmp;
+}
+
 
 /// Main
 int main() {
@@ -163,6 +232,9 @@ int main() {
     c = a + 1;
     c = a - 1;
 
+    Integer x = 1 + c;
+
+    bool ok = c == b;
 
     return 0;
 }
